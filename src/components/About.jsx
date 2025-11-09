@@ -1,0 +1,102 @@
+import React from "react";
+
+export default function About() {
+  return (
+    <section id="about" className="py-24 px-6 bg-gray-900 relative">
+      {/* Subtle background accent */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_600px_at_50%_50%,#3b82f608,transparent)]"></div>
+      
+      <div className="max-w-5xl mx-auto relative">
+        {/* Section header */}
+        <div className="mb-16">
+          <span className="text-blue-500 text-sm font-semibold tracking-wider uppercase">About Me</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mt-2">
+            Building Digital Experiences
+          </h2>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-12 items-start">
+          {/* Left side - Image/Visual element */}
+          <div className="relative">
+            <div className="aspect-square bg-gradient-to-br from-blue-600/10 to-gray-800/50 rounded-2xl border border-gray-800 overflow-hidden">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center p-8">
+                  <div className="w-32 h-32 mx-auto mb-6 bg-blue-600/20 rounded-full flex items-center justify-center border border-blue-500/30">
+                    <svg className="w-16 h-16 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                    </svg>
+                  </div>
+                  <div className="space-y-2 text-gray-400 text-sm">
+                    <p className="flex items-center justify-center gap-2">
+                      <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+                      Self-Taught Developer
+                    </p>
+                    <p className="flex items-center justify-center gap-2">
+                      <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+                      Available for Work
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right side - Content */}
+          <div className="space-y-6">
+            <div>
+              <p className="text-gray-300 leading-relaxed text-lg">
+                I'm a self-taught developer with a passion for creating clean, responsive, and user-friendly web interfaces. I love turning ideas into functional designs, using modern technologies to bring concepts to life.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <div className="w-6 h-6 rounded-full bg-blue-600/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg className="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-white font-semibold mb-1">Modern Stack</h3>
+                  <p className="text-gray-400 text-sm">Specializing in React, Node.js, and Tailwind CSS for building scalable applications.</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <div className="w-6 h-6 rounded-full bg-blue-600/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg className="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-white font-semibold mb-1">User-Focused Design</h3>
+                  <p className="text-gray-400 text-sm">Creating intuitive interfaces that prioritize user experience and accessibility.</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <div className="w-6 h-6 rounded-full bg-blue-600/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg className="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-white font-semibold mb-1">Continuous Learning</h3>
+                  <p className="text-gray-400 text-sm">Always exploring new technologies and best practices in web development.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="pt-6">
+              <div className="inline-flex items-center gap-2 px-5 py-3 bg-blue-600/10 border border-blue-500/30 rounded-lg">
+                <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+                <span className="text-blue-400 font-medium">Open for freelance collaborations</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
