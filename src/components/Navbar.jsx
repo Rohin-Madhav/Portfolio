@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,21 +53,61 @@ export default function Navbar() {
         </ul>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden text-gray-300 hover:text-white">
+        <button 
+          className="md:hidden text-gray-300 hover:text-white transition-colors"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
           <svg
             className="w-6 h-6"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16M4 18h16"
-            />
+            {mobileMenuOpen ? (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            ) : (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            )}
           </svg>
         </button>
+      </div>
+
+      {/* Mobile Menu */}
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ${
+          mobileMenuOpen ? "max-h-96" : "max-h-0"
+        }`}
+      >
+        <ul className="px-6 py-4 bg-gray-950/95 backdrop-blur-xl border-b border-gray-800/50 space-y-2">
+          {["Home", "About", "Skills", "Projects", "Contact"].map((item) => (
+            <li key={item}>
+              <a
+                href={`#${item.toLowerCase()}`}
+                className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${
+                  activeSection === item.toLowerCase()
+                    ? "text-white bg-blue-600"
+                    : "text-gray-400 hover:text-white hover:bg-gray-800"
+                }`}
+                onClick={() => {
+                  setActiveSection(item.toLowerCase());
+                  setMobileMenuOpen(false);
+                }}
+              >
+                {item}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
     </nav>
   );
