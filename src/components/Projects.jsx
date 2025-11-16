@@ -1,23 +1,29 @@
 import React from "react";
 
 export default function Projects() {
-  const projects = [
-    {
-      title: "E-Commerce Website",
-      desc: "Full-stack shopping platform built with React, Node.js, and MongoDB.",
-      link: "#",
-    },
-    {
-      title: "Portfolio Website",
-      desc: "My personal portfolio using React and Tailwind.",
-      link: "#",
-    },
-    {
-      title: "Inventory System",
-      desc: "Backend API for managing products and orders using Express.js.",
-      link: "#",
-    },
-  ];
+ const projects = [
+  {
+    title: "MERN CRM System",
+    desc: "A full-stack CRM platform built with React, Node.js, and MongoDB to manage clients, deals, and analytics.",
+    link: "https://mern-crm-frontend-gi9o.onrender.com",
+  },
+  {
+    title: "Personal Task Manager",
+    desc: "A task management web app with user authentication, task tracking, and CRUD functionality using MERN stack.",
+    link: "https://personal-task-manager-cvpq.onrender.com",
+  },
+  {
+    title: "Health Care System",
+    desc: "A healthcare management system that handles appointments, doctor records, and patient data.",
+    link: "https://health-care-system-1-yzp8.onrender.com",
+  },
+  {
+    title: "Portfolio Website",
+    desc: "My personal portfolio using React and Tailwind.",
+    link: "https://rohin-portfolio.netlify.app", // you can replace this with your real deployed link
+  },
+];
+
 
   return (
     <section id="projects" className="py-24 px-6 bg-gray-950 relative">
