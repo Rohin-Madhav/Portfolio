@@ -27,7 +27,9 @@ export default function Navbar() {
         <a href="#home" className="group">
           <h1 className="text-2xl font-bold flex items-center gap-2">
             <span className="w-2 h-2 bg-blue-500 rounded-full group-hover:scale-125 transition-transform"></span>
-            
+            <span className="text-white group-hover:text-blue-400 transition-colors">
+              Rohin Madhav
+            </span>
           </h1>
         </a>
 
