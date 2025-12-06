@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex flex-col justify-center items-center min-h-screen text-center px-4 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 overflow-hidden"
+      className="relative flex flex-col justify-center items-center min-h-screen text-center px-4  from-gray-950 via-gray-900 to-gray-950 overflow-hidden"
     >
       {/* Subtle background effects */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_1000px_800px_at_50%_-10%,rgba(59,130,246,0.08),transparent)]"></div>

@@ -18,7 +18,7 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Left side - Image/Visual element */}
           <div className="relative">
-            <div className="aspect-square bg-gradient-to-br from-blue-600/10 to-gray-800/50 rounded-2xl border border-gray-800 overflow-hidden">
+            <div className="aspect-square  from-blue-600/10 to-gray-800/50 rounded-2xl border border-gray-800 overflow-hidden">
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center p-8">
                   <div className="w-32 h-32 mx-auto mb-6 bg-blue-600/20 rounded-full flex items-center justify-center border border-blue-500/30">
@@ -51,7 +51,7 @@ export default function About() {
 
             <div className="space-y-4">
               <div className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-blue-600/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <div className="w-6 h-6 rounded-full bg-blue-600/20 flex items-center justify-center  mt-0.5">
                   <svg className="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
@@ -63,7 +63,7 @@ export default function About() {
               </div>
 
               <div className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-blue-600/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <div className="w-6 h-6 rounded-full bg-blue-600/20 flex items-center justify-center mt-0.5">
                   <svg className="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
@@ -75,7 +75,7 @@ export default function About() {
               </div>
 
               <div className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-blue-600/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <div className="w-6 h-6 rounded-full bg-blue-600/20 flex items-center justify-center  mt-0.5">
                   <svg className="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
