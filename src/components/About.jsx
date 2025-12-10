@@ -5,7 +5,7 @@ export default function About() {
     <section id="about" className="py-24 px-6 bg-gray-900 relative">
       {/* Subtle background accent */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_600px_at_50%_50%,#3b82f608,transparent)]"></div>
-      
+
       <div className="max-w-5xl mx-auto relative">
         {/* Section header */}
         <div className="mb-16">
@@ -29,7 +29,7 @@ export default function About() {
                   <div className="space-y-2 text-gray-400 text-sm">
                     <p className="flex items-center justify-center gap-2">
                       <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
-                      Self-Taught Developer
+                      Full Stack Developer
                     </p>
                     <p className="flex items-center justify-center gap-2">
                       <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
@@ -45,7 +45,7 @@ export default function About() {
           <div className="space-y-6">
             <div>
               <p className="text-gray-300 leading-relaxed text-lg">
-                I'm a self-taught developer with a passion for creating clean, responsive, and user-friendly web interfaces. I love turning ideas into functional designs, using modern technologies to bring concepts to life.
+                I am a Full Stack Developer focused on building modern, scalable, and user-friendly web applications. I work with both frontend and backend technologies to deliver reliable, high-performance solutions from concept to deployment.
               </p>
             </div>
 

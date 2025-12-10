@@ -1,8 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 
 export default function Projects() {
  const projects = [
+   {
+     title: "Health Care System",
+     desc: "A healthcare management system that handles appointments, doctor records, and patient data.",
+     link: "https://health-care-system-1-yzp8.onrender.com",
+   },
+   {
+     title: "Portfolio Website",
+     desc: "My personal portfolio using React and Tailwind.",
+     link: "https://rohin-portfolio.netlify.app", 
+   },
   {
     title: "MERN CRM System",
     desc: "A full-stack CRM platform built with React, Node.js, and MongoDB to manage clients, deals, and analytics.",
@@ -14,15 +24,15 @@ export default function Projects() {
     link: "https://personal-task-manager-cvpq.onrender.com",
   },
   {
-    title: "Health Care System",
-    desc: "A healthcare management system that handles appointments, doctor records, and patient data.",
-    link: "https://health-care-system-1-yzp8.onrender.com",
-  },
-  {
-    title: "Portfolio Website",
-    desc: "My personal portfolio using React and Tailwind.",
-    link: "https://rohin-portfolio.netlify.app", 
-  },
+  title: "Note App",
+  desc: "A simple and efficient note-taking web app built with React that allows users to create, edit, and delete notes with local storage support.",
+  link: "https://your-note-keeper.netlify.app",
+},
+{
+  title: "Attendance Tracker",
+  desc: "A web-based attendance management system developed using React and Node.js to help track daily attendance easily.",
+  link: "https://tracker-attendance.netlify.app", 
+},
 ];
 
 
@@ -43,14 +53,14 @@ export default function Projects() {
               <div className="absolute inset-0  from-indigo-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <h3 className="text-2xl font-bold text-white mb-4 relative">{p.title}</h3>
               <p className="text-gray-300 mb-6 relative">{p.desc}</p>
-              <Link
+              <a
                 href={p.link}
                 className="inline-flex items-center text-indigo-400 hover:text-indigo-300 font-medium group-hover:translate-x-2 transition-transform duration-300"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 View Project <span className="ml-2">→</span>
-              </Link>
+              </a>
             </div>
           ))}
         </div>
