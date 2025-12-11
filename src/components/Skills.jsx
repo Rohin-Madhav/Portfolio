@@ -9,7 +9,8 @@ export default function Skills() {
     { name: "Tailwind CSS", icon: "💨" },
     { name: "Node.js", icon: "🟢" },
     { name: "Express", icon: "🚂" },
-    { name: "MongoDB", icon: "🍃" }
+    { name: "MongoDB", icon: "🍃" },
+    { name: "MongoDB", icon: "🛒" }
   ];
 
   return (
