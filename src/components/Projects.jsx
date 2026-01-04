@@ -9,6 +9,11 @@ export default function Projects() {
       link: "https://health-care-system-1-yzp8.onrender.com",
     },
     {
+      title: "Football Academy ",
+      desc: "A modern football academy website showcasing training programs and player development.",
+      link: "https://rmfc.netlify.app",
+    },
+    {
       title: "Portfolio Website",
       desc: "My personal portfolio using React and Tailwind.",
       link: "https://rohin-portfolio.netlify.app",
@@ -33,6 +38,11 @@ export default function Projects() {
       desc: "A web-based attendance management system developed using React and Node.js to help track daily attendance easily.",
       link: "https://tracker-attendance.netlify.app",
     },
+    {
+      title: "Mock Interview Platform",
+      desc: "An ongoing mock interview platform designed to simulate real interview experiences and improve candidate readiness.",
+      link: "#"
+    },
   ];
 
 
@@ -48,7 +58,7 @@ export default function Projects() {
             <div
               key={p.title}
               className="group bg-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-800 hover:border-indigo-500/50 
-  transition-all duration-300 hover:shadow-xl hover:shadow-indigo-500/10 relative overflow-hidden"
+                transition-all duration-300 hover:shadow-xl hover:shadow-indigo-500/10 relative overflow-hidden"
             >
               {/* Overlay (visual only) */}
               <div className="absolute inset-0 from-indigo-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
@@ -62,6 +72,7 @@ export default function Projects() {
               </p>
 
               <a
+
                 href={p.link}
                 className="relative z-10 inline-flex items-center text-indigo-400 hover:text-indigo-300 font-medium group-hover:translate-x-2 transition-transform duration-300"
                 target="_blank"
