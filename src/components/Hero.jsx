@@ -109,7 +109,7 @@ export default function Hero() {
     <section
       ref={sectionRef}
       id="home"
-      className="relative snap-start  flex flex-col justify-center items-center min-h-screen text-center px-4 bg-gray-900 overflow-hidden"
+      className="relative   flex flex-col justify-center items-center min-h-screen text-center px-4 bg-gray-900 overflow-hidden"
     >
       {/* Background layers */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_1000px_800px_at_50%_-10%,rgba(59,130,246,0.08),transparent)]"></div>

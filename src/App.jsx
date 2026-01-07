@@ -8,7 +8,7 @@ import Contact from "./components/Contact";
 
 function App() {
   return (
-    <div className="snap-y snap-mandatory h-screen overflow-y-scroll" >
+    <div id="main-conatainer"  className="overflow-x-hidden" >
       <Navbar />
       <Hero />
       <About />

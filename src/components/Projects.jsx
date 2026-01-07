@@ -57,7 +57,7 @@ export default function Projects() {
     <section
       ref={sectionRef}
       id="projects"
-      className=" snap-start min-h-screen py-24 px-6 bg-gray-950 relative overflow-hidden"
+      className="  min-h-screen py-24 px-6 bg-gray-950 relative overflow-hidden"
     >
       {/* Animated background */}
       <div className="bg-gradient-animate absolute inset-0 bg-[radial-gradient(circle_800px_at_0%_50%,#3b82f615,transparent)] bg-[length:200%_200%]"></div>

@@ -14,7 +14,7 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-24 bg-gray-950 relative snap-start min-h-screen overflow-hidden">
+    <section id="skills" className="py-24 bg-gray-950 relative  min-h-screen overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative">
         {/* Section header */}
         <div className="mb-16">

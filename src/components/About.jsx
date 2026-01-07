@@ -1,41 +1,59 @@
 import { useGSAP } from "@gsap/react";
-import { SplitText } from "gsap/all";
+import { SplitText, ScrollTrigger } from "gsap/all";
 import gsap from "gsap";
 import React, { useRef } from "react";
 
-gsap.registerPlugin(SplitText)
+gsap.registerPlugin(SplitText, ScrollTrigger)
 
 export default function About() {
   const container = useRef()
 
-useGSAP(() => {
-  // Heading animation (This part is fine)
-  const headingSplit = new SplitText(".heading h2", { type: "chars,words" });
-  gsap.from(headingSplit.chars, {
-    yPercent: 100,
-    duration: 1.2,
-    ease: "back.out(1.7)",
-    stagger: 0.02,
-  });
+  useGSAP(() => {
 
-  // FIX: Target ".feature-item" (the blocks we just labeled)
-  gsap.from(".feature-item", {
-    y: 50,
-    opacity: 0,
-    duration: 1,
-    stagger: 0.2,
-    delay: 0.5,
-    ease: "power3.out"
-  });
-}, { scope: container });
+
+    const headingSplit = new SplitText(".heading h2", {
+      type: "chars"
+    });
+
+
+    gsap.from(headingSplit.chars, {
+      scrollTrigger: {
+        trigger: ".heading h2",
+        start: "top 85%",
+        once: true,
+      },
+      y: 40,
+      opacity: 0,
+      stagger: 0.03,
+      ease: "power3.out",
+
+    });
+    gsap.from(".feature-item", {
+      scrollTrigger: {
+        trigger: ".parah",
+        start: "top 75%",
+      },
+      y: 40,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.15,
+      delay: 0.8,
+      ease: "power2.out",
+    });
+
+
+    ScrollTrigger.refresh();
+
+  }, { scope: container });
+
   return (
-    <section id="about" ref={container} className="py-24  snap-start min-h-screen px-6 bg-gray-900 relative">
+    <section id="about" ref={container} className="py-24   min-h-screen px-6 bg-gray-900 relative">
       {/* Subtle background accent */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_600px_at_50%_50%,#3b82f608,transparent)]"></div>
 
       <div className="  max-w-5xl mx-auto relative">
         {/* Section header */}
-        <div className=" heading heading mb-16">
+        <div className=" heading  mb-16">
           <span className="text-blue-500 text-sm font-semibold tracking-wider uppercase">About Me</span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mt-2">
             Building Digital Experiences
