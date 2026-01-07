@@ -171,7 +171,7 @@ export default function Hero() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="mt-16 flex justify-center">
+        <div className="cta-button  mt-16 flex justify-center">
           <div className="flex flex-col items-center gap-2 text-gray-600 animate-bounce">
             <span className="text-sm">Scroll to explore</span>
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
