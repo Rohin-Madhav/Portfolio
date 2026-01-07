@@ -44,7 +44,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 px-6 bg-gray-900 relative">
+    <section id="contact" className="snap-start min-h-screen py-24 px-6 bg-gray-900 relative">
       <div className="absolute inset-0 bg-[radial-gradient(circle_600px_at_70%_50%,#3b82f608,transparent)]"></div>
 
       <div className="max-w-5xl mx-auto relative">

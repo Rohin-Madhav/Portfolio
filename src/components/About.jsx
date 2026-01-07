@@ -2,7 +2,7 @@ import React from "react";
 
 export default function About() {
   return (
-    <section id="about" className="py-24 px-6 bg-gray-900 relative">
+    <section id="about" className="py-24 snap-start min-h-screen px-6 bg-gray-900 relative">
       {/* Subtle background accent */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_600px_at_50%_50%,#3b82f608,transparent)]"></div>
 
