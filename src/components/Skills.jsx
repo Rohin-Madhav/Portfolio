@@ -10,17 +10,75 @@ export default function Skills() {
   const headingRef = useRef(null);
   const cardsRef = useRef([]);
 
-  const skills = [
-    { name: "HTML", icon: "🌐" },
-    { name: "CSS", icon: "🎨" },
-    { name: "JavaScript", icon: "⚡" },
-    { name: "React", icon: "⚛️" },
-    { name: "Tailwind CSS", icon: "💨" },
-    { name: "Node.js", icon: "🟢" },
-    { name: "Express", icon: "🚂" },
-    { name: "MongoDB", icon: "🍃" },
-    { name: "Redux", icon: "🛒" },
-  ];
+ const skills = [
+  {
+    name: "HTML",
+    icon: "🌐",
+    level: "Advanced",
+    category: "Frontend",
+  },
+  {
+    name: "CSS",
+    icon: "🎨",
+    level: "Advanced",
+    category: "Frontend",
+  },
+  {
+    name: "JavaScript",
+    icon: "⚡",
+    level: "Advanced",
+    category: "Frontend",
+  },
+  {
+    name: "React",
+    icon: "⚛️",
+    level: "Advanced",
+    category: "Frontend",
+  },
+  {
+    name: "Tailwind CSS",
+    icon: "💨",
+    level: "Advanced",
+    category: "Frontend",
+  },
+  {
+    name: "Shadcn UI",
+    icon: "🧩",
+    level: "Intermediate",
+    category: "UI / Design System",
+  },
+  {
+    name: "GSAP",
+    icon: "🎬",
+    level: "Intermediate",
+    category: "Animations",
+  },
+  {
+    name: "Redux",
+    icon: "🛒",
+    level: "Intermediate",
+    category: "State Management",
+  },
+  {
+    name: "Node.js",
+    icon: "🟢",
+    level: "Intermediate",
+    category: "Backend",
+  },
+  {
+    name: "Express.js",
+    icon: "🚂",
+    level: "Intermediate",
+    category: "Backend",
+  },
+  {
+    name: "MongoDB",
+    icon: "🍃",
+    level: "Intermediate",
+    category: "Database",
+  },
+];
+
 
   useGSAP(() => {
     requestAnimationFrame(() => {
