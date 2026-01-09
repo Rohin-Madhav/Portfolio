@@ -1,13 +1,14 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger, SplitText } from "gsap/all";
+import { useGSAP } from "@gsap/react";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 export default function Projects() {
-  const sectionRef = useRef(null);
-  const titleRef = useRef(null);
-  const cardsRef = useRef([]);
+  const container = useRef(null);
+  const cardsRef = useRef([])
+
 
   const projects = [
     {
@@ -52,31 +53,60 @@ export default function Projects() {
     },
   ];
 
+  useGSAP(() => {
+    const headingSplit = new SplitText(".heading h2", {
+      type: "chars"
+    });
+
+    gsap.from(headingSplit.chars, {
+      scrollTrigger: {
+        trigger: ".heading h2",
+        start: "top 85%",
+        once: true,
+      },
+      y: 40,
+      opacity: 0,
+      stagger: 0.03,
+      ease: "power3.out",
+
+    });
+    gsap.from(cardsRef.current, {
+      scrollTrigger: {
+        trigger: container.current,
+        start: "top 80%",
+        once: true,
+      },
+      opacity: 0,
+      y: 50,
+      scale: 0.95,
+      duration: 0.6,
+      stagger: 0.15,
+      ease: "power3.out",
+      clearProps: "all",
+    });
+
+
+    ScrollTrigger.refresh();
+
+  }, { scope: container });
+
 
   return (
     <section
-      ref={sectionRef}
+      ref={container}
       id="projects"
       className="  min-h-screen py-24 px-6 bg-gray-950 relative overflow-hidden"
     >
-      {/* Animated background */}
-      <div className="bg-gradient-animate absolute inset-0 bg-[radial-gradient(circle_800px_at_0%_50%,#3b82f615,transparent)] bg-[length:200%_200%]"></div>
 
-      {/* Floating particles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute w-72 h-72 bg-indigo-500/5 rounded-full blur-3xl top-20 left-10 animate-pulse"></div>
-        <div className="absolute w-96 h-96 bg-blue-500/5 rounded-full blur-3xl bottom-20 right-10 animate-pulse" style={{ animationDelay: '1s' }}></div>
-      </div>
 
-      <div className="max-w-6xl mx-auto text-center relative z-10">
-        <h2
-          ref={titleRef}
-          className="text-4xl md:text-5xl font-bold mb-16"
+      <div className="max-w-6xl Featured Projects  mx-auto text-center relative z-10">
+        <div
+          className="text-4xl  heading md:text-5xl font-bold mb-16"
         >
-          <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-500 text-transparent bg-clip-text">
+          <h2 className="text-white">
             Featured Projects
-          </span>
-        </h2>
+          </h2>
+        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((p, index) => (
