@@ -1,5 +1,10 @@
 import React, { useRef, useState } from "react";
 import emailjs from '@emailjs/browser'
+import { useGSAP } from "@gsap/react";
+import { SplitText, ScrollTrigger } from "gsap/all";
+import gsap from "gsap";
+
+gsap.registerPlugin(SplitText, ScrollTrigger)
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -8,6 +13,7 @@ export default function Contact() {
     message: ""
   });
   const form = useRef()
+  const container = useRef()
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -42,19 +48,55 @@ export default function Contact() {
       [e.target.name]: e.target.value
     });
   };
+ 
+  useGSAP(()=>{
+  
+     const headingSplit = new SplitText(".heading h2", {
+         type: "chars"
+       });
+
+  gsap.from(headingSplit.chars, {
+      scrollTrigger: {
+        trigger: ".heading h2",
+        start: "top 85%",
+        once: true,
+      },
+      y: 40,
+      opacity: 0,
+      stagger: 0.03,
+      ease: "power3.out",
+
+    });
+    gsap.from(".feature-item", {
+      scrollTrigger: {
+        trigger: ".parah",
+        start: "top 75%",
+      },
+      y: 40,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.15,
+      delay: 0.8,
+      ease: "power2.out",
+    });
+
+
+    ScrollTrigger.refresh();
+
+  }, { scope: container });
 
   return (
-    <section id="contact" className=" min-h-screen py-24 px-6 bg-gray-900 relative">
+    <section id="contact" ref={container} className=" min-h-screen py-24 px-6 bg-gray-900 relative">
       <div className="absolute inset-0 bg-[radial-gradient(circle_600px_at_70%_50%,#3b82f608,transparent)]"></div>
 
-      <div className="max-w-5xl mx-auto relative">
+      <div className="max-w-5xl parah mx-auto relative">
         {/* Section header */}
-        <div className="mb-16 text-center">
+        <div className="mb-16 heading  text-center">
           <span className="text-blue-500 text-sm font-semibold tracking-wider uppercase">Get In Touch</span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mt-2">
             Let's Work Together
           </h2>
-          <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
+          <p className="text-gray-400 feature-item  mt-4 max-w-2xl mx-auto">
             Have a project in mind or just want to chat? Feel free to reach out!
           </p>
         </div>
@@ -62,17 +104,17 @@ export default function Contact() {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Info */}
           <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
+            <div className="feature-item ">
+              <h3 className="text-2xl feature-item font-bold text-white mb-6">Contact Information</h3>
               <p className="text-gray-400 leading-relaxed">
                 I am currently open to new opportunities and available for freelance projects. I look forward to collaborating on meaningful and impactful work.
               </p>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-4 feature-item ">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-blue-600/10 rounded-lg flex items-center justify-center  border border-blue-500/20">
-                  <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6  h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
@@ -138,7 +180,7 @@ export default function Contact() {
 
           {/* Contact Form */}
           <form ref={form} onSubmit={sendEmail} >
-            <div className="bg-gray-950/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8">
+            <div className="bg-gray-950/50 feature-item  backdrop-blur-sm border border-gray-800 rounded-2xl p-8">
               <div className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
